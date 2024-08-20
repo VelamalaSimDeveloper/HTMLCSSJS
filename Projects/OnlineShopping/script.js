@@ -109,3 +109,11 @@ orderForm.addEventListener("submit", (e) => {
 });
 
 fetchData();
+
+  // Buy Now Button Click Event
+  function navigateToOrderForm() {
+    closeModal(); // Closes the modal
+    showSection("contact"); // Shows the contact section with the order form
+  }
+
+  buyNowButton.addEventListener("click", navigateToOrderForm);
