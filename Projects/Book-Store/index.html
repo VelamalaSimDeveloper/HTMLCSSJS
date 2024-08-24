@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">Books Store</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="fetchBooks('fiction')">Fiction</a></li>
+                <li><a href="#" onclick="fetchBooks('non-fiction')">Non-fiction</a></li>
+                <li><a href="#" onclick="fetchBooks('technology')">Technology</a></li>
+                <li><a href="#" onclick="fetchBooks('history')">History</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="searchQuery" placeholder="Search books...">
+                <button onclick="advancedSearch()">Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div id="main"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Books Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
