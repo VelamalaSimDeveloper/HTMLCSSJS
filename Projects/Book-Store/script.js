@@ -1,24 +1,25 @@
 const maindiv = document.getElementById('main');
 
-// Fetch books by category or search term
 function fetchBooks(category = '') {
-    let url = `https://www.googleapis.com/books/v1/volumes?q=${category}`;
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${category}`;
     fetch(url)
-        .then(res => res.json())
+        .then(response => response.json())
         .then(data => displayBooks(data.items))
-        .catch(err => console.error(err));
+        .catch(error => console.error('Error fetching books:', error));
 }
 
-// Display books in the main content area
 function displayBooks(books) {
-    maindiv.innerHTML = ''; // Clear the existing content
+    maindiv.innerHTML = '';
     books.forEach(book => {
         const div = document.createElement('div');
-        div.classList.add('book-card');
-        
-        const image = document.createElement('img');
-        image.src = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/150';
-        image.alt = book.volumeInfo.title;
+        div.className = 'book-card';
+
+        const img = document.createElement('img');
+        img.src = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/150';
+        img.alt = book.volumeInfo.title;
+
+        const content = document.createElement('div');
+        content.className = 'content';
 
         const title = document.createElement('h2');
         title.textContent = book.volumeInfo.title;
@@ -29,12 +30,12 @@ function displayBooks(books) {
         const description = document.createElement('p');
         description.textContent = book.volumeInfo.description ? book.volumeInfo.description : 'No description available.';
 
-        div.append(image, title, author, description);
+        content.append(title, author, description);
+        div.append(img, content);
         maindiv.appendChild(div);
     });
 }
 
-// Advanced search by user input
 function advancedSearch() {
     const query = document.getElementById('searchQuery').value;
     if (query) {
@@ -44,5 +45,4 @@ function advancedSearch() {
     }
 }
 
-// Initial fetch for default books
 fetchBooks('bestsellers');
