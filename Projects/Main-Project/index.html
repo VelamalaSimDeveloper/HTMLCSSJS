@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini-Bazaar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg bg-dark px-5 py-3 d-flex justify-content-between"
+      >
+        <a href="./index.html" class="navbar-brand text-white"
+          >Mini <span class="text-primary">BAZAAR</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon bg-white"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link text-white">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="./cart.html" class="nav-link text-white"
+                >Cart <i class="fas fa-shopping-cart"></i
+              ></a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              id="searchInput"
+              placeholder="Search Products"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1 class="text-center my-4">Products List</h1>
+      <div class="container my-5">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between mb-4"
+        >
+          <select name="cat" id="cat" class="form-select w-auto">
+            <option value="">Select Category</option>
+          </select>
+          <button id="resetFilters" class="btn btn-secondary mt-2 mt-md-0">
+            Reset Filters
+          </button>
+        </div>
+        <div id="productsList" class="row"></div>
+      </div>
+    </main>
+    <footer class="bg-dark text-white px-5 py-3 text-center">
+      This site Belongs to
+      <span class="text-primary">Velamala Simmannaidu</span> &copy; 2024
+    </footer>
+    <form>
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="email" id="form2Example1" class="form-control" />
+        <label class="form-label" for="form2Example1">Email address</label>
+      </div>
+
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="password" id="form2Example2" class="form-control" />
+        <label class="form-label" for="form2Example2">Password</label>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col d-flex justify-content-center">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="form2Example31"
+              checked
+            />
+            <label class="form-check-label" for="form2Example31">
+              Remember me
+            </label>
+          </div>
+        </div>
+
+        <div class="col">
+          <a href="#!">Forgot password?</a>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        data-mdb-button-init
+        data-mdb-ripple-init
+        class="btn btn-primary btn-block mb-4"
+      >
+        Sign in
+      </button>
+
+      <div class="text-center">
+        <p>Not a member? <a href="#!">Register</a></p>
+        <p>or sign up with:</p>
+        <button
+          type="button"
+          data-mdb-button-init
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating mx-1"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </button>
+
+        <button
+          type="button"
+          data-mdb-button-init
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating mx-1"
+        >
+          <i class="fab fa-google"></i>
+        </button>
+
+        <button
+          type="button"
+          data-mdb-button-init
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating mx-1"
+        >
+          <i class="fab fa-twitter"></i>
+        </button>
+
+        <button
+          type="button"
+          data-mdb-button-init
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating mx-1"
+        >
+          <i class="fab fa-github"></i>
+        </button>
+      </div>
+    </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

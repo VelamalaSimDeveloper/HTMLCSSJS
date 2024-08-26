@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .btn-login {
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .btn-login:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <button type="button" class="btn-login" data-mdb-toggle="modal" data-mdb-target="#loginModal">
+    Welcome to Mini-BAZAR <br> Please Login
+  </button>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="index.html" method="get">
+            <div class="form-outline mb-4">
+              <input type="email" id="form2Example1" class="form-control" required />
+              <label class="form-label" for="form2Example1">Email address</label>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="password" id="form2Example2" class="form-control" required />
+              <label class="form-label" for="form2Example2">Password</label>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="form2Example31" />
+                  <label class="form-check-label" for="form2Example31"> Remember me </label>
+                </div>
+              </div>
+
+              <div class="col text-end">
+                <a href="#!">Forgot password?</a>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+            <div class="text-center">
+              <p>Not a member? <a href="#!">Register</a></p>
+              <p>or sign up with:</p>
+              <div class="social-buttons">
+                <button type="button" class="btn btn-facebook btn-link mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button type="button" class="btn btn-google btn-link mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+
+                <button type="button" class="btn btn-twitter btn-link mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+
+                <button type="button" class="btn btn-github btn-link mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+</body>
+</html>
