@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color:black;
+    justify-content: right;
+    align-items: center;
+    height: 50px;
+    
+}
+li{
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 8%;
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+a:hover{
+    color: red;
+}
+a:active{
+    color: yellow;
+}
