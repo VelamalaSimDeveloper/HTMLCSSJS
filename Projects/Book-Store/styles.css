@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,40 +6,34 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #e0f7fa, #b9fbc0);
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
 }
 
+/* Header Styling */
 header {
-    background: #00796b;
-    padding: 20px 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    background-color: #007bff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 nav .logo {
-    font-size: 2rem;
-    color: #fff;
-    font-weight: 700;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
 }
 
 nav .nav-links {
-    display: flex;
     list-style: none;
+    display: flex;
     gap: 20px;
 }
 
@@ -47,105 +42,96 @@ nav .nav-links li {
 }
 
 nav .nav-links a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s, transform 0.3s;
+    font-size: 1.2rem;
 }
 
 nav .nav-links a:hover {
-    color: #cfd8dc;
-    transform: scale(1.05);
+    text-decoration: underline;
 }
 
 nav .search-bar {
     display: flex;
-    align-items: center;
     gap: 10px;
 }
 
 nav .search-bar input {
-    padding: 10px;
+    padding: 8px;
     font-size: 1rem;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 nav .search-bar button {
-    padding: 10px 20px;
-    background: #004d40;
+    padding: 8px 12px;
+    background-color: white;
     border: none;
-    color: #fff;
+    color: #007bff;
     cursor: pointer;
     font-size: 1rem;
-    border-radius: 20px;
-    transition: background 0.3s, transform 0.3s;
+    border-radius: 5px;
 }
 
 nav .search-bar button:hover {
-    background: #00332b;
-    transform: scale(1.05);
+    background-color: #ddd;
 }
 
-main {
+/* Main Section */
+#main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 80px 20px 40px;
+    padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Book Card Styles */
 .book-card {
-    background: #fff;
+    background-color: white;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     margin: 20px;
     overflow: hidden;
     width: calc(30% - 40px);
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .book-card img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-bottom: 5px solid #00796b;
-}
-
-.book-card .content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    height: auto;
+    border-bottom: 3px solid #007bff;
 }
 
 .book-card h2 {
     font-size: 1.8rem;
-    color: #00796b;
-    margin-bottom: 10px;
+    color: #007bff;
+    margin: 20px;
+    text-align: center;
 }
 
 .book-card h3 {
-    font-size: 1.2rem;
-    color: #004d40;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #555;
+    margin: 10px 20px;
+    text-align: center;
 }
 
 .book-card p {
     font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;
-    line-height: 1.4;
+    color: #666;
+    margin: 20px;
+    text-align: justify;
+    padding-bottom: 20px;
 }
 
-.book-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
+/* Responsive Design */
 @media (max-width: 992px) {
     .book-card {
         width: calc(45% - 40px);
@@ -158,12 +144,12 @@ main {
     }
 }
 
+/* Footer Styling */
 footer {
-    background: #00796b;
-    color: #fff;
+    background-color: #007bff;
+    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     margin-top: 40px;
     font-size: 1rem;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
