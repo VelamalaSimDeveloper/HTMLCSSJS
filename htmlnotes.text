@@ -1,0 +1,30 @@
+html means hyper text markup language. --markup language means a language which deals with tags.
+html is used for genearate doc.(html doc)
+html contains a lot of elements...use of elemts is how to disbap in that doc.
+html l;atest version html5.
+
+what is elemnt?
+synatx?
+<tag> content.... </tag>
+
+..note: no end tag ,,empty tags ex:<br>
+
+heading tags:
+h1 to h6...
+h1 is the most imporant heading,,h6 least imporant heading.in our doc ,basic stabdrds ..use only one h1 tag.
+paragraph tag ?
+it is normal passage..
+foramatting tags :
+it is delas about the content: 
+1) b 
+2)strong
+3)i 
+4)em 
+5)small 
+6)mark 
+7)sub 
+8)sup 
+9)del
+10)ins
+quotation tag:
+q
